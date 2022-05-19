@@ -24,5 +24,31 @@ namespace Wpf_InputForm
         {
             InitializeComponent();
         }
+
+        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                this.DragMove(); //DragMove() - режим перетаскивания для нестандарных окон
+            }
+        }
+
+        private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ClickCount == 2)
+            {
+                this.WindowState = WindowState.Normal;
+            }
+        }
+
+        private void Form_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Form_Loaded_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
